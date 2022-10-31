@@ -1,4 +1,6 @@
-import { request } from "../../utils/request";
+import {
+  request
+} from "../../utils/request";
 
 // pages/login/login.js
 Page({
@@ -30,25 +32,55 @@ Page({
     const res = await wx.getUserProfile({
       desc: '为了更好的为您服务~',
     }).catch(e => console.log('error:', e))
-    if(!res) return
+    if (!res) return
     // 获取nickname和avatar
-    const {nickName:nickname,avatarUrl:avatar} = res.userInfo
-    console.log(nickname,avatar);
+    const {
+      nickName: nickname,
+      avatarUrl: avatar
+    } = res.userInfo
+    console.log(nickname, avatar);
 
     // 获取code
-    const {code} = await wx.login({})
+    const {
+      code
+    } = await wx.login({})
     console.log(code);
     // 2.发请求(调用后台接口),实现微信登录
-    const res2 = await request({
+    const {
+      status,
+      message,
+      token
+    } = await request({
       url: 'user/wxlogin',
-      method:'POST',
-      data:{
+      method: 'POST',
+      data: {
         nickname,
         avatar,
         code
       },
-      tip:'微信登录中···'
+      tip: '微信登录中···'
     })
-    console.log(res2);
+    if (status === 0) {
+      // 保存token
+      wx.setStorageSync('token', token)
+      // 提示，提示完毕之后跳转到首页
+      wx.showToast({
+        title: message,
+        duration: 1000,
+        success: () => {
+          // 提示1s之后跳转到首页
+          setTimeout(() => [
+            wx.reLaunch({
+              url: '/pages/home/home',
+            })
+          ], 1000);
+        }
+      })
+    }
+  },
+  goToPhoneLogin(){
+    wx.navigateTo({
+      url: '/subpkg/phone-login/phone-login',
+    })
   }
 })

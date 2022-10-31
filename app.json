@@ -8,6 +8,14 @@
     "pages/index/index",
     "pages/other/other"
   ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "phone-login/phone-login"
+      ]
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

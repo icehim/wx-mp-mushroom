@@ -7,6 +7,6 @@
   <button class="wx-login-button" plain bindtap="wxLogin">
     <image src="/assets/images/wx_login@2x.png" class="wx-login-img"></image>
   </button>
-  <text class="phone-login">手机号登录</text>
+  <text class="phone-login" bindtap="goToPhoneLogin">手机号登录</text>
   <text class="bottom-tip">Copyright © 2022 蘑菇在线</text>
 </view>

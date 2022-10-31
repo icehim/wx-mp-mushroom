@@ -15,6 +15,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "手机号登录页面",
+          "pathName": "subpkg/phone-login/phone-login",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
