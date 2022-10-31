@@ -1,3 +1,5 @@
+import { request } from "../../utils/request";
+
 // pages/login/login.js
 Page({
   async wxLogin() {
@@ -33,8 +35,20 @@ Page({
     const {nickName:nickname,avatarUrl:avatar} = res.userInfo
     console.log(nickname,avatar);
 
+    // 获取code
     const {code} = await wx.login({})
     console.log(code);
     // 2.发请求(调用后台接口),实现微信登录
+    const res2 = await request({
+      url: 'user/wxlogin',
+      method:'POST',
+      data:{
+        nickname,
+        avatar,
+        code
+      },
+      tip:'微信登录中···'
+    })
+    console.log(res2);
   }
 })
