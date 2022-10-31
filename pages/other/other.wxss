@@ -1,0 +1,14 @@
+/* pages/other/other.wxss */
+@import "./common.wxss";
+
+.parent{
+  background-color: aquamarine;
+  /* width: 300px; */
+  width: 750rpx;
+  height: 300px;
+}
+.child {
+  background-color:  palegreen;
+  width: 375rpx;
+  height: 150px;
+}

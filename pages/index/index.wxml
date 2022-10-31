@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  微信
+  <button bindtap="goToOther">点击跳转other</button>
+</view>

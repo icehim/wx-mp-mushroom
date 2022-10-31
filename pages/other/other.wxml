@@ -1,0 +1,10 @@
+<!--pages/other/other.wxml-->
+<!-- 小程序中传参，使用自定义属性 -->
+<view class="parent" bindtap="parentTap" data-id="{{10001}}" data-name="张三">
+  <!-- <view class="child" bindtap="childTap"></view> -->
+  <!-- 小程序中要阻止事件冒泡使用catch来绑定 -->
+
+  <view class="child" catchtap="childTap">
+    <text class="test">测试</text>
+  </view>
+</view>

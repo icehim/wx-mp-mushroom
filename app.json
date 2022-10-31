@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/course/course",
+    "pages/study/study",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/other/other"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "🤩教育在线",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fff",
+    "selectedColor": "#ff9a29",
+    "borderStyle": "white",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/tabs/icon_home@2x.png",
+        "selectedIconPath": "/assets/tabs/icon_home_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程",
+        "iconPath": "/assets/tabs/icon_course@2x.png",
+        "selectedIconPath": "/assets/tabs/icon_course_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "text": "学习",
+        "iconPath": "/assets/tabs/icon_study@2x.png",
+        "selectedIconPath": "/assets/tabs/icon_study_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/assets/tabs/icon_my@2x.png",
+        "selectedIconPath": "/assets/tabs/icon_my_selected@2x.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
