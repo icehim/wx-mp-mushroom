@@ -12,7 +12,8 @@
     {
       "root": "subpkg",
       "pages": [
-        "phone-login/phone-login"
+        "phone-login/phone-login",
+        "course-detail/course-detail"
       ]
     }
   ],
