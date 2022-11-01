@@ -12,6 +12,10 @@ function request({
     wx.showLoading({
       title: tip,
     })
+    const token = wx.getStorageSync('token')
+    if (token){
+      header.Authorization = token
+    }
     wx.request({
       url: `${BASEURL}${url}`,
       method,
@@ -30,6 +34,9 @@ function request({
     })
   })
 }
+
+// 把我们上面的request函数，挂载到全局对象wx上，并给他取名叫$request
+wx.$request = request
 export {
   request
 }

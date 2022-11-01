@@ -3,11 +3,11 @@
   <text class="phone-validate">手机号验证</text>
   <text class="subtitle">用于及时获取课程最新信息</text>
   <view class="content">
-    <input class="phone" type="text" placeholder="请输入您的手机号" model:value="{{phone}}"/>
-    <view class="get_vcode">获取验证码</view>
-    <input class="vcode" type="text" placeholder="请输入验证码" model:value="{{vcode}}"/>
+    <input class="phone" type="text" data-name="phone" placeholder="请输入您的手机号" value="{{phone}}" bindinput="changeValue"/>
+    <view class="get_vcode" style="color: {{isCountDown ? '#a8a8a8' : 'black'}};" bindtap="getVcode">{{tip}}</view>
+    <input class="vcode" type="text" data-name="vcode" placeholder="请输入验证码" value="{{vcode}}" bindinput="changeValue"/>
   </view>
   <view class="phone-login">
-    <image src="/assets/images/phone_login@2x.png"></image>
+    <image bindtap="phoneLogin" src="/assets/images/phone_login@2x.png"></image>
   </view>
 </view>
