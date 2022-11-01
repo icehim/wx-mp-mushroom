@@ -16,9 +16,29 @@
     </view>
     <!-- scroll-view必须指定滚动方向，如果是水平滚动使用scroll-x，还有水平滚动时不允许换行 -->
     <scroll-view scroll-x class="course-container">
-      <view bindtap="goToDetail" data-id="{{item.id}}" wx:for="{{courses}}" wx:key="id" class="course-item">
+      <!-- 通过编程式导航跳转 -->
+      <!-- <view bindtap="goToDetail" data-id="{{item.id}}" wx:for="{{courses}}" wx:key="id" class="course-item">
         <image  src="{{item.icon}}" ></image>
-      </view>
+      </view> -->
+      <!-- 通过声明式导航跳转 -->
+      <navigator url="/subpkg/course-detail/course-detail?id={{item.id}}" wx:for="{{courses}}" wx:key="id" class="course-item">
+        <image src="{{item.icon}}"></image>
+      </navigator>
     </scroll-view>
   </view>
+  <!-- 热门视频 -->
+  <view>
+    <view class="tips">
+      <text class="tip">热门视频</text>
+      <image src="/assets/images/arrow@2x.png" bindtap="switchToCourse"></image>
+    </view>
+    <view class="hot-video">
+      <view class="video-item" wx:for="{{videos}}" wx:key="id">
+        <image class="" src="{{item.cover_photo_url}}"></image>
+        <text class="title">{{item.name}}</text>
+        <text class="subtitle">{{item.view_count}}人已观看</text>
+      </view>
+    </view>
+  </view>
+
 </view>

@@ -6,7 +6,8 @@ Page({
    */
   data: {
     swipers:[], // 轮播图
-    courses:[] // 推荐课程
+    courses:[], // 推荐课程
+    videos:[] //热门视频
   },
 
   /**
@@ -15,6 +16,7 @@ Page({
   onLoad(options) {
     this.getSwipersData()
     this.getCoursesData()
+    this.getVideosData()
   },
   async getSwipersData(){
     const {status,message} = await wx.$request({
@@ -33,6 +35,16 @@ Page({
     if(status === 0) {
       this.setData({
         courses:message
+      })
+    }
+  },
+  async getVideosData(){
+    const {status,message} = await wx.$request({
+      url:'home/video'
+    })
+    if(status === 0) {
+      this.setData({
+        videos:message
       })
     }
   },
