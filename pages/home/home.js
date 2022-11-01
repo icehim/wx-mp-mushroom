@@ -63,6 +63,9 @@ Page({
     wx.navigateTo({
       url: '/subpkg/course-detail/course-detail?id='+id,
     })
+  },
+  getValue(val){
+    console.log('home:',val.detail);
   }
 
 })

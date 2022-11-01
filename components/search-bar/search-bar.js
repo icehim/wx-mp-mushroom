@@ -21,6 +21,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    tapMe(e){
+      const data = e.currentTarget.dataset
+      this.triggerEvent('myevent',data)
+    }
   }
 })

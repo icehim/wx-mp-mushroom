@@ -1,5 +1,5 @@
 <!--components/search-bar/search-bar.wxml-->
-<view class="weui-search-bar__box">
+<view class="weui-search-bar__box" bindtap="tapMe" data-name="张三" data-age="{{18}}">
   <icon class="weui-icon-search_in-box" type="search" size="17" color="#ff9e34"></icon>
   <text class="weui-search-bar__input">{{placeholder}}</text>
 </view>
