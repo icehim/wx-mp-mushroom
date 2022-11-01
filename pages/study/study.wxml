@@ -1,2 +1,4 @@
 <!--pages/study/study.wxml-->
-<text>pages/study/study.wxml</text>
+<view>
+  <van-button type="info">主要按钮</van-button>
+</view>

@@ -1,2 +1,4 @@
 <!--pages/course/course.wxml-->
-<text>pages/course/course.wxml</text>
+<view>
+  <van-button type="primary">主要按钮</van-button>
+</view>

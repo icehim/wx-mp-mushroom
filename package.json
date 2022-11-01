@@ -1,0 +1,23 @@
+{
+  "name": "wx-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkpeach-cn/wx-mp-mushroom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkpeach-cn/wx-mp-mushroom/issues"
+  },
+  "homepage": "https://github.com/thinkpeach-cn/wx-mp-mushroom#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.10.5"
+  }
+}
