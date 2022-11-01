@@ -65,7 +65,10 @@ Page({
     })
   },
   getValue(val){
-    console.log('home:',val.detail);
+    // console.log('home:',val.detail);
+    wx.navigateTo({
+      url: '/subpkg/search/search',
+    })
   }
 
 })
