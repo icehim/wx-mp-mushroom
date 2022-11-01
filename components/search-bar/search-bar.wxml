@@ -1,0 +1,5 @@
+<!--components/search-bar/search-bar.wxml-->
+<view class="weui-search-bar__box">
+  <icon class="weui-icon-search_in-box" type="search" size="17" color="#ff9e34"></icon>
+  <text class="weui-search-bar__input">{{placeholder}}</text>
+</view>

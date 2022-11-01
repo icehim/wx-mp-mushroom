@@ -1,5 +1,7 @@
 <!--pages/home/home.wxml-->
 <view class="home-container">
+  <!-- 使用自定义组件 -->
+  <search-bar placeholder="请输入课程的名称" />
   <!-- 轮播图 -->
   <swiper autoplay circular interval="{{3000}}">
     <block wx:for="{{swipers}}" wx:key="id">
