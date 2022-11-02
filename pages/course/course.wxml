@@ -1,4 +1,4 @@
 <!--pages/course/course.wxml-->
 <view>
-  <van-button type="primary">主要按钮</van-button>
+  <course-list courses="{{courses}}"/>
 </view>
