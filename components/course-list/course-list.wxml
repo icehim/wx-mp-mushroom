@@ -1,11 +1,21 @@
 <!--components/course-list/course-list.wxml-->
+<wxs src="./course-list.wxs" module="utils" />
+
 <view class="course-container">
   <navigator class="course-item" url="/subpkg/course-detail/course-detail?id={{item.id}}" wx:for="{{courses}}" wx:key="id">
   <image src="{{item.icon}}"></image>
   <text class="title">{{item.title}}</text>
   <text class="subtitle">{{item.subtitle}}</text>
-  <text class="level">{{item.level}}</text>
-  
+  <!-- <text class="level">{{item.level}}</text> -->
+  <!-- 条件渲染 -->
+  <!-- <text class="level" wx:if="{{item.level ===1}}">初级</text>
+  <text class="level" wx:if="{{item.level ===2}}">中级</text>
+  <text class="level" wx:if="{{item.level ===3}}">高级</text> -->
+  <!-- 对象取值的方式 -->
+  <!-- <text class="level">{{levelObj[item.level]}}</text> -->
+
+  <!-- wxs的写法类似于过滤器 -->
+  <text class="level">{{utils.formatLevel(item.level)}}</text>
   
   </navigator>
 

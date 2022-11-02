@@ -1,0 +1,21 @@
+function formatLevel(level) {
+  var levelName = ''
+  switch (level) {
+    case 1:
+      levelName = '初级'
+      break;
+    case 2:
+      levelName = '中级'
+      break;
+    case 3:
+      levelName = '高级'
+      break;
+    default:
+      break;
+  }
+  return levelName
+}
+
+module.exports = {
+  formatLevel:formatLevel
+}
