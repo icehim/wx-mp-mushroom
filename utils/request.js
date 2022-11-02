@@ -13,7 +13,7 @@ function request({
       title: tip,
     })
     const token = wx.getStorageSync('token')
-    if (token){
+    if (token) {
       header.Authorization = token
     }
     wx.request({
@@ -22,6 +22,14 @@ function request({
       header,
       data,
       success(res) {
+        if (res.data.code === 402) {
+          // 清除token
+          wx.removeStorageSync('token')
+          // 跳回登录页面
+          wx.reLaunch({
+            url: '/pages/login/login',
+          })
+        }
         //成功之后返回所需的数据
         resolve(res.data);
       },
