@@ -8,9 +8,9 @@ App({
     // 在这个钩子中，先获取token，如果有则跳转到首页
     const token = wx.getStorageSync('token')
     if(token) {
-      wx.reLaunch({
-        url: '/pages/home/home',
-      })
+      // wx.reLaunch({
+      //   url: '/pages/home/home',
+      // })
     }
   },
   onShow(options){

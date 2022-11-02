@@ -5,10 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
+    courses:[]//搜索到的课程列表
   },
   /**
    * 生命周期函数--监听页面加载
    */
+
+  async onSearch(e) {
+    if(e.detail.trim().length === 0) return
+    const {status,message} = await wx.$request({
+      url:'course/search',
+      data:{
+        name:e.detail
+      }
+    })
+    if(status===0){
+      this.setData({
+        courses:message
+      })
+    }
+  },
+
   onLoad(options) {
 
   },

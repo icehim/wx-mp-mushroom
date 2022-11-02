@@ -58,6 +58,7 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "van-button" : "@vant/weapp/button/index"
+    "van-button" : "@vant/weapp/button/index",
+    "course-list" : "/components/course-list/course-list"
   }
 }
