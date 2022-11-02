@@ -1,4 +1,16 @@
 <!--pages/study/study.wxml-->
-<view>
-  <van-button type="info">主要按钮</van-button>
+<view class="study-container">
+  <view wx:for="{{progresses}}" wx:key="sid" class="study-item">
+    <image src="{{item.icon}}"></image>
+    <view class="meta">
+      <text class="title">{{item.title}}</text>
+      <text class="progress">已学习{{item.study_hour}}课时/{{item.total_hour}}</text>
+    </view>
+    <!-- 右边进度 -->
+    <view class="circle">
+      <van-circle stroke-width="{{5}}" layer-color="#f3f3f3" size="{{55}}" value="{{ item.study_progress }}" color="{{item.color}}">
+        <text style="color: {{item.color}}; font-size: 14px;">{{item.study_progress}}%</text>
+      </van-circle> 
+    </view>
+  </view>
 </view>
