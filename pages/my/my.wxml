@@ -1,2 +1,45 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="my-container">
+  <view class="header">
+    <image src="{{userInfo.avatar}}" class="avatar"></image>
+    <text class="nickname">{{userInfo.nickname}}</text>
+
+  </view>
+  <view class="tips">
+    <view class="left">
+      <text class="title">{{userInfo.study_hour}}</text>
+      <text class="subtitle">累计学习小时</text>
+    </view>
+
+    <view class="middle">
+      <text class="title">{{userInfo.follow_count}}</text>
+      <text class="subtitle">我的关注</text>
+    </view>
+    <view class="right">
+      <text class="title">{{userInfo.course_count}}</text>
+      <text class="subtitle">我的课程</text>
+    </view>
+  </view>
+  <view class="cells">
+    <view class="cell">
+      <text>学习历史</text>
+      <image src="/assets/images/arrow@2x.png"></image>
+    </view>
+    <view class="cell">
+      <text>消息提醒</text>
+      <image src="/assets/images/arrow@2x.png"></image>
+    </view>
+    <view class="cell">
+      <text>清楚缓存</text>
+      <image src="/assets/images/arrow@2x.png"></image>
+    </view>
+    <view class="cell">
+      <text>商务合作</text>
+      <image src="/assets/images/arrow@2x.png"></image>
+    </view>
+    <view class="cell" bindtap="contact">
+      <text>联系我们</text>
+      <image src="/assets/images/arrow@2x.png"></image>
+    </view>
+  </view>
+</view>

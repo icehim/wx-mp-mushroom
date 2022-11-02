@@ -36,6 +36,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/my/my",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "学习页面",
+          "pathName": "pages/study/study",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
